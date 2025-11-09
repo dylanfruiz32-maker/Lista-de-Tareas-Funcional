@@ -1,0 +1,57 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+:root {
+    color-scheme: light dark;
+    /* Color: light */
+    --primary-color-light: #CE4760;
+    --secondary-color-light: #000000;
+    --border-color-light: rgba(0,0,0,0.1);
+    --body-color-light: white;
+    --body-secondary-color-light: rgb(228, 228, 228);
+    --active-nav-menu-btn-color-light: rgb(239,239,239);
+    --box-color-light: rgb(255, 255, 255);
+    --placeholder-text-light: #5b5b5b;
+    --text-color-light: black;
+
+
+    /* Color: dark */
+    --primary-color-dark: #c98692;
+    --secondary-color-dark: white;
+    --border-color-dark: rgba(255, 255, 255, 0.1);
+    --body-color-dark: rgb(21, 21, 21);
+    --body-secondary-color-dark: rgb(27, 26, 49);
+    --active-nav-menu-btn-color-dark: rgb(239,239,239);
+    --box-color-dark: rgb(63, 53, 75);
+    --placeholder-text-dark: #2b2a2a;
+    --text-color-dark: rgb(216, 216, 216);
+
+    /* Color */
+    --primary-color: light-dark(var(--primary-color-light), var(--primary-color-dark));
+    --secondary-color: light-dark(var(--secondary-color-light), var(--secondary-color-dark));
+    --border-color: light-dark(var(--border-color-light), var(--border-color-dark));
+    --body-color: light-dark(var(--body-color-light), var(--body-color-dark));
+    --body-secondary-color: light-dark(var(--body-secondary-color-light), var(--body-secondary-color-dark));
+    --active-nav-menu-btn-color: light-dark(var(--active-nav-menu-btn-color-light), var(--active-nav-menu-btn-color-dark));
+    --box-color: light-dark(var(--box-color-light), var(--box-color-dark));
+    --placeholder-color: light-dark(var(--placeholder-text-light), var(--placeholder-text-dark));
+    --text-color: light-dark(var(--text-color-light), var(--text-color-dark));
+
+    --max-width-page: 80rem;
+}
+
+body, h1, p {
+  margin: 0.5rem;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
