@@ -20,23 +20,29 @@ const updateTaskCounters = (tasks) => {
 
 const renderTasks = (tasks) => {
     taskList.innerHTML = '';
+    
     tasks.forEach(task => {
         const clone = taskItemTemplate.content.cloneNode(true);
+        
+        const taskText = clone.querySelector('p');
         const li = clone.querySelector('li');
-        li.id = task.id;
 
-        const taskText = li.querySelector('p');
-        const checkBtn = li.querySelector('check');
-        taskText.textContent = task.text;
-
-        if (task.completed) {
-            taskText.classList.add('completed-task');
-            checkBtn.classList.add('check');
-        };
-        taskList.append(li);
+        if (taskText) {
+            taskText.textContent = task.text; 
+            
+            if (task.completed) {
+                taskText.classList.add('completed-task');
+            }
+        }
+        
+        if (li) {
+            li.id = task.id;
+        }
+        taskList.append(clone);
     });
     updateTaskCounters(tasks);
 };
+
 
 const handleStateInput = () => {
     if(isValidTask) {
