@@ -81,7 +81,7 @@ input::placeholder{
 .task-list{
     background-color: transparent;
     border-radius: 2px;
-    border: 1px solid black;
+    border: none;
     overflow-y: auto;
     overflow-x: hidden;
 }
