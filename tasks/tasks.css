@@ -1,10 +1,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--body-secondary-color);
+    margin: 0;
+    overflow: hidden;
 }
 
-h1
-{
+h1{
     color: var(--secondary-color);
     text-align: center;
     padding-bottom: 1.5rem;
@@ -21,24 +22,22 @@ main
     align-items: center;
 }
 
-.cuadro
-{
+.container-tasks{
     background-color: var(--box-color);
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
     border-radius: 20px;
     padding: 15px;
 }
 
-.arriba
-{
+.container-new-task{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
 }
 
-.texto
-{
+.text-input{
     width: 90%;
     margin-right: 0.8rem;
     border-radius: 12px;
@@ -54,36 +53,32 @@ input::placeholder{
 }
 
 
-.mas
-{
+.btn-add{
     background-color: rgb(112, 46, 112);
     color: white;
     border-color: transparent;
     margin-right: 0.8rem;
     border-radius: 12px;
-    width: 5%;
-    height: 40px;
+    width: 50px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 22px;
 }
 
-.mas:hover
+.btn-add:hover
 {
     background-color: rgb(153, 57, 153);
     cursor: pointer;
 }
 
-.p
-{
+.error-message{
     color: rgb(250, 155, 155);
-    font-size: 16px;
+    font-size: 18px;
 }
 
-
-
-.abajo{
+.task-list{
     background-color: transparent;
     border-radius: 2px;
     border: 1px solid black;
@@ -100,7 +95,7 @@ ul
 li {
     display: flex;
     align-items: center;       
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 
@@ -149,53 +144,54 @@ footer button{
     border-color: transparent;
 }
 
-.Azul{
+.total-tasks{
     color: white;
     background-color: rgb(26, 26, 172);
     border-color: transparent;
     font-size: large;
 }
 
-.Azul:hover{
+.total-tasks:hover{
     cursor: pointer;
     background-color: rgb(35, 35, 195);
 }
-.Verde{
+
+.complete-tasks{
     color: white;
     background-color: rgb(40, 144, 75);
     border-color: transparent;
     font-size: large;
 }
 
-.Verde:hover{
+.complete-tasks:hover{
     cursor: pointer;
     background-color: rgb(19, 128, 62);
 }
 
-.Rojo{
+.incomplete-tasks{
     color: white;
     background-color: rgb(243, 34, 7);
     border-color: transparent;
     font-size: large;
 }
 
-.Rojo:hover{
+.incomplete-tasks:hover{
     cursor: pointer;
     background-color: rgb(214, 10, 13);
 }
 
 /* Telefono*/
 @media (max-width: 767px){
-    #titulo{
-    font-size: 50px;
+    h1{
+    font-size: 60px;
     padding: 10px;
     }
 
-    .cuadro {
+    .container-tasks{
         width: 90%; 
     }
 
-    .texto{
+    .text-input{
         font-size: 18px;
         flex: content;
     }
@@ -208,7 +204,7 @@ footer button{
         font-size: 15px;
     }
 
-    .abajo{
+    .task-list{
         max-height: 40vh;
         overflow-y: auto;
         overflow-x:hidden;
@@ -227,41 +223,30 @@ footer button{
         font-size: 16px; 
         display: flex;
     }
-
-    
-    .mas{
-        flex: content;
-        max-width: 15%;
-    }
-
 }
-
 
 /* Tablet */
 @media (min-width: 768px) {
-    #titulo{
-    font-size: 90px;
+    h1{
+    font-size: 80px;
     padding: 40px;
     }
 
-    .cuadro{
-        width: 90%;
+    .container-tasks{
+        width: 70%;
     }   
 
-    .texto{
+    .text-input{
         font-size: 20px;
         flex: content;
     }
 
-    .p{
-        font-size: 20px;
-    }
 
     li p{
         font-size: 18px;
     }
 
-    .abajo{
+    .task-list{
         max-height: 40vh;
         overflow-y: auto;
         overflow-x:hidden;
@@ -285,30 +270,22 @@ footer button{
 
 /* Laptop */
 @media (min-width: 1025px){
-    
-    #titulo{
+
+    h1{
         font-size: 100px;
         padding: 30px;
     }
-    
-    .cuadro{
-        width: 70%;
-    } 
 
-    .texto{
+    .text-input{
         font-size: 20px;
         flex: content;
-    }
-
-    .p{
-        font-size: 20px;
     }
 
     li p{
         font-size: 18px;
     }
 
-    .abajo{
+    .task-list{
         max-height: 40vh;
         overflow-y: auto;
         overflow-x:hidden;
@@ -331,30 +308,22 @@ footer button{
 
 /* Escritorio */
 @media (min-width: 1444px){
-    #titulo{
+    h1{
         font-size: 120px;
-        padding: 55px;
+        padding: 50px;
     }
 
-    .cuadro{
-        width: 50%;
-    }   
-
-    .texto{
+    .text-input{
         font-size: 22px;
         flex: content;
         margin: 5px;
-    }
-
-    .p{
-        font-size: 20px;
     }
 
     li p{
         font-size: 18px;
     }
 
-    .abajo{
+    .task-list{
         max-height: 40vh;
         overflow-y: auto;
         overflow-x:hidden;
