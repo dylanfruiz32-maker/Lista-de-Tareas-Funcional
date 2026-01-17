@@ -80,7 +80,6 @@ input::placeholder{
 
 .task-list{
     background-color: transparent;
-    border-radius: 2px;
     border: none;
     overflow-y: auto;
     overflow-x: hidden;
